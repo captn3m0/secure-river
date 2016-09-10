@@ -1,5 +1,3 @@
-from sqlalchemy.orm import relationship
-
 from app import db
 
 from datetime import datetime
@@ -11,15 +9,12 @@ def get_uuid():
 
 class Base(db.Document):
     meta = {'allow_inheritance': True}
-
     id = db.UUIDField(primary_key=True, default=get_uuid)
     created_at = db.DateTimeField(default=datetime.now)
-
 
 class Client(Base):
     trust_score = db.IntField(default=0, max_value=100)
     token = db.StringField(max_length=255)
-
 
 class Network(Base):
     circle = db.StringField(max_length=80)
@@ -27,19 +22,16 @@ class Network(Base):
     state = db.StringField(max_length=120)
     mobile = db.BooleanField(default=False)
 
-
 class Job(Base):
     scheduled_on = db.DateTimeField()
     site = db.URLField()
     network = db.ReferenceField(Network)
     status = db.StringField()
 
-
 class Response(Base):
     headers = db.StringField()
     status = db.IntField()
     body = db.StringField()
-
 
 class Report(Base):
     job = db.ReferenceField(Job)

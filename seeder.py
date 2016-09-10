@@ -2,10 +2,14 @@ from bs4 import BeautifulSoup
 import requests
 import collections
 import csv
+from mobile_codes import operators, mcc_mnc
 
 Network = collections.namedtuple('Network', ['isp', 'org', 'state'], verbose=False)
 
 def seed_mcc_codes():
+    for code in ('404', '405'):
+        l = operators(code)
+        print(l)
     pass
 
 def get_ip_addresses():
@@ -48,5 +52,5 @@ def seed_ip_addresses():
 
 def seed():
     seed_mcc_codes()
-    seed_ip_addresses()
+    # seed_ip_addresses()
 

@@ -1,9 +1,8 @@
+import json
 from app import app
-
-@app.route('/jobs', methods=['GET'])
-def fetch_jobs():
-    print(g.networks)
-    return models.job.find_by_network(network).json()
+from flask import request, g
+import json
+from models import Client, Job, Network
 
 @app.route('/jobs/<id>', methods=['GET'])
 def fetch_job_details(id):
@@ -23,4 +22,4 @@ def create_client():
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return json.dumps(g.client)
