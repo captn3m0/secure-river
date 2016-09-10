@@ -4,7 +4,6 @@ from sqlalchemy_utils import UUIDType
 
 from app import db
 from models.base import BaseModel
-from models.report import Report
 
 
 class Client(BaseModel):

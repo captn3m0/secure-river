@@ -16,7 +16,7 @@ class Report(BaseModel):
     client_id = db.Column(db.Integer, db.ForeignKey('client.id'))
 
     # relationship
-    network = relationship(Network, foreign_keys=network_id)
+    network = db.relationship(Network, foreign_keys=network_id)
     network_apparent = relationship(
             Network,
             foreign_keys=network_ip_appr)
