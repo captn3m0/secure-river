@@ -20,7 +20,7 @@ class Network(Base):
     region = db.StringField(max_length=3)
     isp = db.StringField(max_length=200)
     mobile = db.BooleanField(default=False)
-    mccmnc = db.StringField(max_length=6)
+    mccmnc = db.StringField(max_length=6, null=True)
 
 class Job(Base):
     scheduled_on = db.DateTimeField()

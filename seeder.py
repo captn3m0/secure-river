@@ -3,7 +3,7 @@ import requests
 import collections
 import csv
 from mobile_codes import operators, mcc_mnc
-from models import Job, Network
+from models import Job, Network as NetworkModel
 import datetime
 from data.isp import STATE_LOOKUPS, CODE_LOOKUPS
 import re
@@ -34,11 +34,12 @@ def seed_mcc_codes():
                     telco = lookup[1]
                     break
 
-            print ((telco, state))
+            current = NetworkModel.objects(region=state, isp=telco, mobile=True).first()
 
-            # Network(region=state, isp=)
-
-
+            if current == None:
+                mccmnc = mcc + mnc
+                entity = NetworkModel(region=state, isp=telco, mobile=True, mccmnc=mccmnc)
+                entity.save()
 
 def get_ip_addresses():
     BASE_URL = 'http://tools.tracemyip.org/search--country/india:-v-:&gNr=50&gTr='
