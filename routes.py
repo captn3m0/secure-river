@@ -1,24 +1,9 @@
-from flask import Flask
-from flask import g
+from app import app
 
-from os.path import abspath, dirname
-import sys
-
-from flask_mongoengine import MongoEngine
-
-app = Flask(__name__)
-db = MongoEngine(app)
-
-sys.path.append(abspath(dirname(__file__)))
-
-import click
-import network as network_util
-import seeder
-
-app.before_request(network_util.Network.middleware)
-
-# import all the routes
-from views import register
+@app.route('/jobs', methods=['GET'])
+def fetch_jobs():
+    print(g.networks)
+    return models.job.find_by_network(network).json()
 
 @app.route('/jobs/<id>', methods=['GET'])
 def fetch_job_details(id):
@@ -39,8 +24,3 @@ def create_client():
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
-
-@app.cli.command()
-def populate_networks():
-    click.echo('Populating network database')
-    seeder.seed()

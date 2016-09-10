@@ -3,15 +3,21 @@ from sqlalchemy.orm import relationship
 from app import db
 
 from datetime import datetime
+from uuid import uuid4
 
+def get_uuid():
+    uid = uuid4()
+    return uid.hex
 
 class Base(db.Document):
-    id = db.UUIDType(primary_key=True)
+    meta = {'allow_inheritance': True}
+
+    id = db.UUIDField(primary_key=True, default=get_uuid)
     created_at = db.DateTimeField(default=datetime.now)
 
 
 class Client(Base):
-    trust_score = db.IntField()
+    trust_score = db.IntField(default=0, max_value=100)
     token = db.StringField(max_length=255)
 
 
@@ -39,7 +45,7 @@ class Report(Base):
     job = db.ReferenceField(Job)
     network = db.ReferenceField(Network)
     network_appr = db.ReferenceField(Network)
-    client_id = db.Column(db.Integer, db.ForeignKey('client.id'))
+    client_id = db.ReferenceField(Client)
     status = db.StringField(max_length=80)
     response = db.StringField(max_length=90)
     tcp = db.BooleanField()
