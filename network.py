@@ -13,9 +13,9 @@ class Network(object):
 
   def get_network_id(data):
     if (data['type'] == 'mobile'):
-      # TODO: split it
-      network = self.lookup_mcc_mnc(data['mccmnc'])
-    network_apparent = self.get_isp_info(data.ip)
+      mcc,mnc = (data['mccmnc'][0:3], data['mccmnc'][3:])
+      network = Network.lookup_mcc_mnc(mcc, mnc)
+    network_apparent = Network.get_isp_info(data['ip'])
     return (network, network_apparent)
 
   def middleware():
