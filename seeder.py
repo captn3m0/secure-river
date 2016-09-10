@@ -5,14 +5,31 @@ import csv
 from mobile_codes import operators, mcc_mnc
 from models import Job
 import datetime
+from data.isp import STATE_LOOKUPS, CODE_LOOKUPS
+import re
 
 Network = collections.namedtuple('Network', ['isp', 'org', 'state'], verbose=False)
 
 def seed_mcc_codes():
     for code in ('404', '405'):
-        l = operators(code)
-        print(l)
-    pass
+        for network in operators(code):
+            state = network[3]
+            telco = network[2]
+            mnc = network[1]
+            mcc = code
+
+            for lookup in STATE_LOOKUPS:
+                if re.search(lookup[0], state, flags=re.IGNORECASE):
+                    state = lookup[1]
+                    break
+
+            # Known UNINOR
+            # http://mcclist.com/mobile-network-codes-country-codes.asp
+            if mcc == '405' and telco=='Uninor' and len(state) !=2:
+                lookup = {'813': 'HA','814': 'HP','815': 'JK','816': 'PB','817': 'RJ','818': 'UT','819': 'AP','820': 'KA','821': 'KE','822': 'WB', '875': 'AS', '876': 'BI', '877': 'NE', '878': 'OR', '879': 'UPE', '880': 'UP', '844': 'DE'}
+                state = lookup[mnc]
+
+            print ((state, telco))
 
 def get_ip_addresses():
     BASE_URL = 'http://tools.tracemyip.org/search--country/india:-v-:&gNr=50&gTr='

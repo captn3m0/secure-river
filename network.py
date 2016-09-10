@@ -25,3 +25,5 @@ class Network(object):
             g.networks = self.get_network_id(val['network'])
         return None
 
+    # @staticmethod
+    # def get_isp_code(name):
