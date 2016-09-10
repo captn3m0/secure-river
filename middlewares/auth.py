@@ -13,6 +13,6 @@ def auth():
         # This becomes None in special cases
         res = Client.objects(token='1c78ab7363024c2d96ccb02e9f33a4c5')
         if res:
-            g.client = res[0].to_json()
+            g.client = str(res[0].id)
         else:
             g.client = False
