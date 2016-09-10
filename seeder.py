@@ -3,6 +3,8 @@ import requests
 import collections
 import csv
 from mobile_codes import operators, mcc_mnc
+from models import Job
+import datetime
 
 Network = collections.namedtuple('Network', ['isp', 'org', 'state'], verbose=False)
 
@@ -54,3 +56,7 @@ def seed():
     seed_mcc_codes()
     # seed_ip_addresses()
 
+def seed_jobs():
+    d = datetime.datetime.now()
+    job = Job(scheduled_on=d, site='https://thepiratebay.org', network=None, status='PENDING')
+    job.save()

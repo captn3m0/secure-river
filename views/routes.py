@@ -6,7 +6,7 @@ from models import Client, Job, Network
 
 @app.route('/jobs/<id>', methods=['GET'])
 def fetch_job_details(id):
-    return models.job.find_by_id(id).json()
+    return (id).json()
 
 @app.route('/network/<id>', methods=['GET'])
 def fetch_network_reports(id):

@@ -26,3 +26,8 @@ from views import register, routes
 def populate_networks():
     click.echo('Populating network database')
     seeder.seed()
+
+@app.cli.command()
+def populate_jobs():
+    click.echo('Populating jobs')
+    seeder.seed_jobs()
