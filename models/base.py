@@ -3,7 +3,7 @@ from sqlalchemy_utils import UUIDTyp
 
 from app import db
 
-class Base(db.Model):
+class BaseModel(db.Model):
     # Primary Id key
     id         = db.Column(UUIDType(binary = False), primary_key = True)
     created_at = db.Column(db.DateTime)
