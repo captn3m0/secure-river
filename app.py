@@ -14,6 +14,7 @@ from models.report import Report
 
 sys.path.append(abspath(dirname(__file__)))
 
+from sqlalchemy import create_engine
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
@@ -38,3 +39,7 @@ def fetch_network_reports(id):
 def submit_job_response(id):
     job = models.job.find(id)
 
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
