@@ -8,6 +8,7 @@ import sys
 
 sys.path.append(abspath(dirname(__file__)))
 
+from sqlalchemy import create_engine
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
