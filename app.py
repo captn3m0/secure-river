@@ -1,17 +1,13 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 from flask import g
 
 from os.path import abspath, dirname
 import sys
 
-from sqlalchemy import create_engine
+from flash_mongoengine import MongoEngine
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+db = MongoEngine(app)
 
 sys.path.append(abspath(dirname(__file__)))
 

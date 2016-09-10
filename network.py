@@ -18,6 +18,7 @@ class Network(object):
     network_apparent = Network.get_isp_info(data['ip'])
     return (network, network_apparent)
 
+  @staticmethod
   def middleware():
     val = request.values
     if ('network' in val):

@@ -4,61 +4,45 @@ from app import db
 
 from datetime import datetime
 
-from sqlalchemy_utils import UUIDType
 
-class Client(db.Model):
-    __tablename__ = 'client'
-    __tableargs__ = {'extend_existing': True}
-
-    trust_score = db.Column(db.Integer)
-    token = db.Column(db.String(120))
-    id         = db.Column(UUIDType(binary = False), primary_key = True)
-    created_at = db.Column(db.DateTime, default=datetime.now())
-
-class Network(db.Model):
-    __tablename__ = 'network'
-    __tableargs__ = {'extend_existing': True}
-
-    id         = db.Column(db.Integer, primary_key = True)
-    created_at = db.Column(db.DateTime, default=datetime.now())
-    circle = db.Column(db.String(80))
-    telco = db.Column(db.String(80))
-    state = db.Column(db.String(120))
+class Base(db.Document):
+    id = db.UUIDType(primary_key=True)
+    created_at = db.DateTimeField(default=datetime.now)
 
 
-class Job(db.Model):
-    __tablename__ = 'job'
-    __tableargs__ = {'extend_existing': True}
-
-    scheduled_on = db.Column(db.DateTime)
-    site = db.Column(db.String)
-    network_id = db.Column(db.String, db.ForeignKey('network.id'))
-    scheduled_on = db.Column(db.DateTime)
-    status = db.Column(db.String(89))
-
-    network = db.relationship(Network)
-
-    id         = db.Column(UUIDType(binary = False), primary_key = True)
-    created_at = db.Column(db.DateTime, default=datetime.now())
+class Client(Base):
+    trust_score = db.IntField()
+    token = db.StringField(max_length=255)
 
 
+class Network(Base):
+    circle = db.StringField(max_length=80)
+    telco = db.StringField(max_length=80)
+    state = db.StringField(max_length=120)
+    mobile = db.BooleanField(default=False)
 
 
-class Report(db.Model):
-    __tablename__ = 'report'
+class Job(Base):
+    scheduled_on = db.DateTimeField()
+    site = db.URLField()
+    network = db.ReferenceField(Network)
+    status = db.StringField()
 
-    id         = db.Column(UUIDType(binary = False), primary_key = True)
-    created_at = db.Column(db.DateTime, default=datetime.now())
-    job_id = db.Column(db.Integer, db.ForeignKey('job.id'))
-    network_id = db.Column(db.Integer, db.ForeignKey('network.id'))
-    network_id_appr = db.Column(db.Integer, db.ForeignKey('network.id'))
+
+class Response(Base):
+    headers = db.StringField()
+    status = db.IntField()
+    body = db.StringField()
+
+
+class Report(Base):
+    job = db.ReferenceField(Job)
+    network = db.ReferenceField(Network)
+    network_appr = db.ReferenceField(Network)
     client_id = db.Column(db.Integer, db.ForeignKey('client.id'))
-
-    # relationship
-    network = db.relationship(Network, foreign_keys=network_id)
-    network_apparent = relationship(
-            Network,
-            foreign_keys=network_id_appr)
-
-    status = db.Column(db.String)
-    response = db.Column(db.String)
+    status = db.StringField(max_length=80)
+    response = db.StringField(max_length=90)
+    tcp = db.BooleanField()
+    metadata = db.StringField()
+    dns_ip = db.StringField(null=True)
+    http_response = db.ReferenceField(Response)
