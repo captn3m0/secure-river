@@ -8,12 +8,6 @@ import sys
 
 import network as network_util
 
-# Import models here to migrate
-from models.network import Network
-from models.job import Job
-from models.client import Client
-from models.report import Report
-
 from sqlalchemy import create_engine
 
 app = Flask(__name__)
@@ -21,6 +15,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 app.before_request(network_util.middleware)
+
+sys.path.append(abspath(dirname(__file__)))
+
+import models
 
 @app.route('/jobs', methods['GET'])
 def fetch_jobs():
