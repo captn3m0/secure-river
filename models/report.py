@@ -1,10 +1,10 @@
 from sqlalchemy.orm import relationship
 
 from app import db
-from base import BaseModel
-from client import Client
-from job import Job
-from network import Network
+from models.base import BaseModel
+from models.client import Client
+from models.job import Job
+from models.network import Network
 
 
 class Report(BaseModel):
