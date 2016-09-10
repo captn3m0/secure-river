@@ -1,8 +1,13 @@
-from sqlalchemy_utils import UUIDType
 import uuid
 
-class Client(Base):
-    __tablename__ = 'clients'
+from sqlalchemy_utils import UUIDType
 
-    # Pass `binary=False` to fallback to CHAR instead of BINARY
-    id = sa.Column(UUIDType(binary=False), primary_key=True)
+from app import db
+from models.base import BaseModel
+
+
+class Client(BaseModel):
+    __tablename__ = 'client'
+
+    trust_score = db.Column(db.Integer)
+    token = db.Column(db.String(120))
