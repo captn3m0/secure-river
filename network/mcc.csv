@@ -1,0 +1,279 @@
+mcc,mnc,network,operator,region
+404,0,Sistema Shyam,Sistema Shyam,Rajasthan
+404,1,Vodafone,Vodafone,Haryana
+405,1,Reliance Telecom,Reliance Telecom,Andhra Pradesh
+404,2,Bharti Airtel Ltd,Airtel,Punjab
+404,3,Bharti Airtel Ltd,Airtel,Himachal Pradesh
+405,3,Reliance Telecom,Reliance Telecom,Bihar
+405,4,Reliance Telecom,Reliance Telecom,Chennai
+404,4,Idea,Idea,Delhi
+405,5,Reliance Telecom,Reliance Telecom,Delhi
+404,5,Vodafone,Vodafone,Gujarat
+405,6,Reliance Telecom,Reliance Telecom,Gujarat
+405,7,Reliance Telecom,Reliance Telecom,Haryana
+404,7,Idea,Idea,Andhra Pradesh
+405,8,Reliance Telecom,Reliance Telecom,Himachal Pradesh
+405,9,Reliance Telecom,Reliance Telecom,Jammu & Kashmir
+404,9,Reliance Telecom,Reliance Telecom,Assam
+405,10,Reliance Telecom,Reliance Telecom,Karnataka
+404,10,Bharti Airtel Ltd,Airtel,Delhi
+405,11,Reliance Telecom,Reliance Telecom,Kerala
+404,11,Vodafone,Vodafone,Delhi
+405,12,Reliance Telecom,Reliance Telecom,Kolkata
+404,12,Idea,Idea,Haryana
+404,13,Vodafone,Vodafone,Andhra Pradesh
+405,13,Reliance Telecom,Reliance Telecom,Maharashtra
+405,14,Reliance Telecom,Reliance Telecom,Madhya Pradesh
+404,14,Idea,Idea,Punjab
+405,15,Reliance Telecom,Reliance Telecom,Mumbai
+404,15,Vodafone,Vodafone,Uttar Pradesh (East)
+404,16,Bharti Airtel Ltd,Airtel,North East
+404,17,Aircel,Aircel,West Bengal
+405,17,Reliance Telecom,Reliance Telecom,Orissa
+405,18,Reliance Telecom,Reliance Telecom,Punjab
+404,18,Reliance Telecom,Reliance Telecom,Himachal Pradesh
+405,19,Reliance Telecom,Reliance Telecom,Rajasthan
+404,19,Idea,Idea,Kerala
+405,20,Reliance Telecom,Reliance Telecom,Tamilnadu
+404,20,Vodafone,Vodafone,Mumbai
+405,21,Reliance Telecom,Reliance Telecom,Uttar Pradesh (East)
+404,21,LOOP,LOOP,Mumbai
+404,22,Idea,Idea,Maharashtra
+405,22,Reliance Telecom,Reliance Telecom,Uttar Pradesh (West)
+405,23,Reliance Telecom,Reliance Telecom,West Bengal
+404,24,Idea,Idea,Gujarat
+405,24,HFCL INFOTEL,HFCL INFOTEL,Punjab
+404,25,Aircel,Aircel,Bihar
+405,25,TATA Teleservices,TATA Teleservices,Andhra Pradesh
+405,26,TATA Teleservices,TATA Teleservices,Assam
+405,27,TATA Teleservices,TATA Teleservices,Bihar
+404,27,Vodafone,Vodafone,Maharashtra
+405,28,TATA Teleservices,TATA Teleservices,Chennai
+404,28,Aircel,Aircel,Orissa
+404,29,Aircel,Aircel,Assam
+405,29,TATA Teleservices,TATA Teleservices,Delhi
+405,30,TATA Teleservices,TATA Teleservices,Gujarat
+404,30,Vodafone,Vodafone,Kolkata
+405,31,TATA Teleservices,TATA Teleservices,Haryana
+404,31,Bharti Airtel Ltd,Airtel,Kolkata
+405,32,TATA Teleservices,TATA Teleservices,Himachal Pradesh
+405,33,TATA Teleservices,TATA Teleservices,Jammu & Kashmir
+404,33,Aircel,Aircel,North East
+404,34,BSNL,BSNL,Haryana
+405,34,TATA Teleservices,TATA Teleservices,Karnataka
+405,35,TATA Teleservices,TATA Teleservices,Kerala
+404,35,Aircel,Aircel,Himachal Pradesh
+405,36,TATA Teleservices,TATA Teleservices,Kolkata
+404,36,Reliance Telecom,Reliance Telecom,Bihar
+405,37,TATA Teleservices,TATA Teleservices,Maharashtra
+404,37,Aircel,Aircel,Jammu & Kashmir
+404,38,BSNL,BSNL,Assam
+405,38,TATA Teleservices,TATA Teleservices,Madhya Pradesh
+405,39,TATA Teleservices,TATA Teleservices,Mumbai
+405,40,TATA Teleservices,TATA Teleservices,North East
+404,40,Bharti Airtel Ltd,Airtel,Chennai
+404,41,Aircel,Aircel,Chennai
+405,41,TATA Teleservices,TATA Teleservices,Orissa
+405,42,TATA Teleservices,TATA Teleservices,Punjab
+404,42,Aircel,Aircel,Tamilnadu
+405,43,TATA Teleservices,TATA Teleservices,Rajasthan
+404,43,Vodafone,Vodafone,Tamilnadu
+405,44,TATA Teleservices,TATA Teleservices,Tamilnadu
+404,44,Idea,Idea,Karnataka
+404,45,Bharti Airtel Ltd,Airtel,Karnataka
+405,45,TATA Teleservices,TATA Teleservices,Uttar Pradesh (East)
+405,46,TATA Teleservices,TATA Teleservices,Uttar Pradesh (West)
+404,46,Vodafone,Vodafone,Kerala
+405,47,TATA Teleservices,TATA Teleservices,West Bengal
+405,48,INDIAN RAILWAYS GSM-R,Indian Raylways,ALL CIRCLES
+404,49,Bharti Airtel Ltd,Airtel,Andhra Pradesh
+404,50,Reliance Telecom,Reliance Telecom,North East
+405,51,Bharti Airtel Ltd,Airtel,West Bengal
+404,51,BSNL,BSNL,Himachal Pradesh
+405,52,Bharti Airtel Ltd,Airtel,Bihar
+404,52,Reliance Telecom,Reliance Telecom,Orissa
+405,53,Bharti Airtel Ltd,Airtel,Orissa
+404,53,BSNL,BSNL,Punjab
+404,54,BSNL,BSNL,Uttar Pradesh (West)
+405,54,Bharti Airtel Ltd,Airtel,Uttar Pradesh (East)
+405,55,Bharti Airtel Ltd,Airtel,Jammu & Kashmir
+404,55,BSNL,BSNL,Uttar Pradesh (East)
+404,56,Idea,Idea,Uttar Pradesh (West)
+405,56,Bharti Airtel Ltd,Airtel,Assam
+404,57,BSNL,BSNL,Gujarat
+404,58,BSNL,BSNL,Madhya Pradesh
+404,59,BSNL,BSNL,Rajasthan
+404,60,Vodafone,Vodafone,Rajasthan
+404,62,BSNL,BSNL,Jammu & Kashmir
+404,64,BSNL,BSNL,Chennai
+404,66,BSNL,BSNL,Maharashtra
+405,66,Vodafone,Vodafone,Uttar Pradesh (West)
+405,67,Vodafone,Vodafone,West Bengal
+404,67,Reliance Telecom,Reliance Telecom,Madhya Pradesh
+404,68,MTNL,Dolphin,Delhi
+404,69,MTNL,Dolphin,Mumbai
+405,70,Idea,Idea,Bihar
+404,70,Bharti Airtel Ltd,Airtel,Rajasthan
+404,71,BSNL,BSNL,Karnataka
+404,72,BSNL,BSNL,Kerala
+404,73,BSNL,BSNL,Andhra Pradesh
+404,74,BSNL,BSNL,West Bengal
+404,75,BSNL,BSNL,Bihar
+404,76,BSNL,BSNL,Orissa
+404,77,BSNL,BSNL,North East
+404,78,Idea,Idea,Madhya Pradesh
+404,79,BSNL,BSNL,Andaman Nicobar
+404,80,BSNL,BSNL,Tamilnadu
+404,81,BSNL,BSNL,Kolkata
+404,82,Idea,Idea,Himachal Pradesh
+404,83,Reliance Telecom,Reliance Telecom,Kolkata
+404,84,Vodafone,Vodafone,Chennai
+404,85,Reliance Telecom,Reliance Telecom,West Bengal
+404,86,Vodafone,Vodafone,Karnataka
+404,87,Idea,Idea,Rajasthan
+404,88,Vodafone,Vodafone,Punjab
+404,89,Idea,Idea,Uttar Pradesh (East)
+404,90,Bharti Airtel Ltd,Airtel,Maharashtra
+404,91,Aircel,Aircel,Kolkata
+404,92,Bharti Airtel Ltd,Airtel,Mumbai
+404,93,Bharti Airtel Ltd,Airtel,Madhya Pradesh
+404,94,Bharti Airtel Ltd,Airtel,Tamilnadu
+404,95,Bharti Airtel Ltd,Airtel,Kerala
+404,96,Bharti Airtel Ltd,Airtel,Haryana
+404,97,Bharti Airtel Ltd,Airtel,Uttar Pradesh (West)
+404,98,Bharti Airtel Ltd,Airtel,Gujarat
+405,750,Vodafone,Vodafone,Jammu & Kashmir
+405,751,Vodafone,Vodafone,Assam
+405,752,Vodafone,Vodafone,Bihar
+405,753,Vodafone,Vodafone,Orissa
+405,754,Vodafone,Vodafone,Himachal Pradesh
+405,755,Vodafone,Vodafone,North East
+405,756,Vodafone,Vodafone,Madhya Pradesh
+405,799,Idea,Idea,Mumbai
+405,800,Aircel,Aircel,Delhi
+405,801,Aircel,Aircel,Andhra Pradesh
+405,802,Aircel,Aircel,Gujarat
+405,803,Aircel,Aircel,Karnataka
+405,804,Aircel,Aircel,Maharashtra
+405,805,Aircel,Aircel,Mumbai
+405,806,Aircel,Aircel,Rajasthan
+405,807,Aircel,Aircel,Haryana
+405,808,Aircel,Aircel,Madhya Pradesh
+405,809,Aircel,Aircel,Kerala
+405,810,Aircel,Aircel,Uttar Pradesh (East)
+405,811,Aircel,Aircel,Uttar Pradesh (West)
+405,812,Aircel,Aircel,Punjab
+405,813,Telenor Unitech,Uninor,Haryana
+405,814,Telenor Unitech,Uninor,Himachal Pradesh
+405,815,Telenor Unitech,Uninor,Jammu & Kashmir
+405,816,Telenor Unitech,Uninor,Punjab
+405,817,Telenor Unitech,Uninor,Rajasthan
+405,818,Telenor Unitech,Uninor,Uttar Pradesh (West)
+405,819,Telenor Unitech,Uninor,Andhra Pradesh
+405,820,Telenor Unitech,Uninor,Karnataka
+405,821,Telenor Unitech,Uninor,Kerala
+405,822,Telenor Unitech,Uninor,Kolkata
+405,823,Videocon,Videocon,Andhra Pradesh
+405,824,Videocon,Videocon,Assam
+405,825,Videocon,Videocon,Bihar
+405,826,Videocon,Videocon,Delhi
+405,827,Videocon,Videocon,Gujarat
+405,828,Videocon,Videocon,Haryana
+405,829,Videocon,Videocon,Himachal Pradesh
+405,830,Videocon,Videocon,Jammu & Kashmir
+405,831,Videocon,Videocon,Karnataka
+405,832,Videocon,Videocon,Kerala
+405,833,Videocon,Videocon,Kolkata
+405,834,Videocon,Videocon,Madhya Pradesh
+405,835,Videocon,Videocon,Maharashtra
+405,836,Videocon,Videocon,Mumbai
+405,837,Videocon,Videocon,North East
+405,838,Videocon,Videocon,Orissa
+405,839,Videocon,Videocon,Rajasthan
+405,840,Videocon,Videocon,Tamilnadu
+405,841,Videocon,Videocon,Uttar Pradesh (East)
+405,842,Videocon,Videocon,Uttar Pradesh (West)
+405,843,Videocon,Videocon,West Bengal
+405,844,Telenor Unitech,Uninor,Delhi
+405,845,Idea,Idea,Assam
+405,846,Idea,Idea,Jammu & Kashmir
+405,848,Idea,Idea,Kolkata
+405,849,Idea,Idea,North East
+405,850,Idea,Idea,Orissa
+405,852,Idea,Idea,Tamilnadu
+405,853,Idea,Idea,West Bengal
+405,854,LOOP,LOOP,Andhra Pradesh
+405,855,LOOP,LOOP,Assam
+405,856,LOOP,LOOP,Bihar
+405,857,LOOP,LOOP,Delhi
+405,858,LOOP,LOOP,Gujarat
+405,859,LOOP,LOOP,Haryana
+405,860,LOOP,LOOP,Himachal Pradesh
+405,861,LOOP,LOOP,Jammu & Kashmir
+405,862,LOOP,LOOP,Karnataka
+405,863,LOOP,LOOP,Kerala
+405,864,LOOP,LOOP,Kolkata
+405,865,LOOP,LOOP,Madhya Pradesh
+405,866,LOOP,LOOP,Maharashtra
+405,867,LOOP,LOOP,North East
+405,868,LOOP,LOOP,Orissa
+405,869,LOOP,LOOP,Punjab
+405,870,LOOP,LOOP,Rajasthan
+405,871,LOOP,LOOP,Tamilnadu
+405,872,LOOP,LOOP,Uttar Pradesh (East)
+405,873,LOOP,LOOP,Uttar Pradesh (West)
+405,874,LOOP,LOOP,West Bengal
+405,875,Telenor Unitech,Uninor,Assam
+405,876,Telenor Unitech,Uninor,Bihar
+405,877,Telenor Unitech,Uninor,North East
+405,878,Telenor Unitech,Uninor,Orissa
+405,879,Telenor Unitech,Uninor,Uttar Pradesh (East)
+405,880,Telenor Unitech,Uninor,West Bengal
+405,881,S TEL,S TEL,Assam
+405,882,S TEL,S TEL,Bihar
+405,883,S TEL,S TEL,Himachal Pradesh
+405,884,S TEL,S TEL,Jammu & Kashmir
+405,885,S TEL,S TEL,North East
+405,886,S TEL,S TEL,Orissa
+405,887,Sistema Shyam,Sistema Shyam,Andhra Pradesh
+405,888,Sistema Shyam,Sistema Shyam,Assam
+405,889,Sistema Shyam,Sistema Shyam,Bihar
+405,890,Sistema Shyam,Sistema Shyam,Delhi
+405,891,Sistema Shyam,Sistema Shyam,Gujarat
+405,892,Sistema Shyam,Sistema Shyam,Haryana
+405,893,Sistema Shyam,Sistema Shyam,Himachal Pradesh
+405,894,Sistema Shyam,Sistema Shyam,Jammu & Kashmir
+405,895,Sistema Shyam,Sistema Shyam,Karnataka
+405,896,Sistema Shyam,Sistema Shyam,Kerala
+405,897,Sistema Shyam,Sistema Shyam,Kolkata
+405,898,Sistema Shyam,Sistema Shyam,Madhya Pradesh
+405,899,Sistema Shyam,Sistema Shyam,Maharashtra
+405,900,Sistema Shyam,Sistema Shyam,Mumbai
+405,901,Sistema Shyam,Sistema Shyam,North East
+405,902,Sistema Shyam,Sistema Shyam,Orissa
+405,903,Sistema Shyam,Sistema Shyam,Punjab
+405,904,Sistema Shyam,Sistema Shyam,Tamilnadu
+405,905,Sistema Shyam,Sistema Shyam,Uttar Pradesh (East)
+405,906,Sistema Shyam,Sistema Shyam,Uttar Pradesh (West)
+405,907,Sistema Shyam,Sistema Shyam,West Bengal
+405,912,Etisalat DB,Etisalat DB,Andhra Pradesh
+405,913,Etisalat DB,Etisalat DB,Delhi
+405,914,Etisalat DB,Etisalat DB,Gujarat
+405,915,Etisalat DB,Etisalat DB,Haryana
+405,916,Etisalat DB,Etisalat DB,Karnataka
+405,917,Etisalat DB,Etisalat DB,Kerala
+405,918,Etisalat DB,Etisalat DB,Maharashtra
+405,919,Etisalat DB,Etisalat DB,Mumbai
+405,920,Etisalat DB,Etisalat DB,Punjab
+405,921,Etisalat DB,Etisalat DB,Rajasthan
+405,922,Etisalat DB,Etisalat DB,Tamilnadu
+405,923,Etisalat DB,Etisalat DB,Uttar Pradesh (East)
+405,924,Etisalat DB,Etisalat DB,Uttar Pradesh (West)
+405,925,Telenor Unitech,Uninor,Tamilnadu
+405,926,Telenor Unitech,Uninor,Mumbai
+405,927,Telenor Unitech,Uninor,Gujarat
+405,928,Telenor Unitech,Uninor,Madhya Pradesh
+405,929,Telenor Unitech,Uninor,Maharashtra
+405,930,Etisalat DB,Etisalat DB,Bihar
+405,931,Etisalat DB,Etisalat DB,Madhya Pradesh
+405,932,Videocon,Videocon,Punjab
