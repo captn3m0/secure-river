@@ -14,11 +14,17 @@ def fetch_all_job_details():
 
 @app.route('/network/<id>', methods=['GET'])
 def fetch_network_reports(id):
-    return models.network.find_by_id(id).reports().json()
+    network = Network.objects(id=id)
+    if network:
+        network = network[0]
+        return network.to_json()
 
 @app.route('/jobs/<id>/submit', methods=['POST'])
 def submit_job_response(id):
-    job = models.job.find(id)
+    job = Job.objects(id=id)
+    if job:
+        job = job[0]
+        return job.to_json()
 
 @app.route('/clients', methods=['POST'])
 def create_client():
