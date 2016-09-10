@@ -19,12 +19,11 @@ class Client(BaseModel):
 
         deprecated=['md5_crypt']
     ))
-    device = db.Column(db.String)
 
-   	def register(self, device):
+   	def register(self):
    		trust_score = 1
 		token = uuid.uuid4()
-   		Client.insert().values((trust_score=trust_score, token=token, device=device))
+   		Client.insert().values((trust_score=trust_score, token=token))
    		return token
 
    	def findClientByToken(self, token):
