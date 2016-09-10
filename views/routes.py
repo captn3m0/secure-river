@@ -19,6 +19,10 @@ def fetch_network_reports(id):
         network = network[0]
         return network.to_json()
 
+@app.route('/networks', methods=['GET'])
+def fetch_all_network_reports():
+    return Network.objects.only('isp','region','mobile', 'mccmnc').to_json()
+
 @app.route('/jobs/<id>/submit', methods=['POST'])
 def submit_job_response(id):
     job = Job.objects(id=id)
