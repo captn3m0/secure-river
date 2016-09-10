@@ -17,10 +17,10 @@ class Client(Base):
     token = db.StringField(max_length=255)
 
 class Network(Base):
-    circle = db.StringField(max_length=80)
-    telco = db.StringField(max_length=80)
-    state = db.StringField(max_length=120)
+    region = db.StringField(max_length=3)
+    isp = db.StringField(max_length=200)
     mobile = db.BooleanField(default=False)
+    mccmnc = db.StringField(max_length=6)
 
 class Job(Base):
     scheduled_on = db.DateTimeField()
