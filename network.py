@@ -20,6 +20,6 @@ class Network(object):
 
   def middleware():
     val = request.values
-    if (val['network']):
-      # What the client said
+    if ('network' in val):
       g.networks = self.get_network_id(val['network'])
+    return None
