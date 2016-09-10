@@ -15,5 +15,3 @@ class NetworkTest(unittest.TestCase):
     assert details['isp'] == 'Bharti Broadband'
     assert details['city'] == 'New Delhi (Okhla Phase III)'
     assert details['regionName'] == 'NCT'
-
-
