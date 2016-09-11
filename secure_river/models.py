@@ -73,7 +73,6 @@ class Network(Base):
 class Job(Base):
     scheduled_on = db.DateTimeField()
     site = db.URLField()
-    network = db.ReferenceField(Network)
     status = db.StringField()
 
 class Response(Base):

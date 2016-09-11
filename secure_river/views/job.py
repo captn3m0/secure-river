@@ -4,6 +4,7 @@ from flask import request, g, jsonify
 
 from secure_river import app
 from secure_river.models import Client, Job, Network
+import datetime
 
 @app.route('/jobs/<id>', methods=['GET'])
 def fetch_job_details(id):
@@ -36,14 +37,18 @@ def submit_job_response(id):
     return report.to_json()
 
 # Submit a job
-@app.route('/job', method=['POST'])
+@app.route('/jobs', methods=['POST'])
 def create_job():
     data = request.values
-    values = {
-        'site': data['site']
-    }
-    job = Job(values)
+    d = datetime.datetime.now()
+
+    job = Job(scheduled_on=d, site=data['url'], status='PENDING')
     job.save()
-    return job.to_json()
+
+    return jsonify({
+        'id': job.id,
+        'url': job.site,
+        'status': job.status
+    })
 
 
