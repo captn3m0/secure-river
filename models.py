@@ -26,7 +26,7 @@ class Network(Base):
 
     @staticmethod
     def find_by_mcc_mnc(mcc_mnc):
-        return Network.objects(db.Q(mobile=True) & db.Q(mccmnc=mcc_mnc)).only('region', 'isp', 'mccmnc').first()
+        return Network.objects(db.Q(mobile=True) & db.Q(mccmnc=mcc_mnc)).only('region', 'isp', 'mccmnc', 'mobile').first()
 
     # This is only called for non-mobile requests
     # Where we don't have any way of knowing
