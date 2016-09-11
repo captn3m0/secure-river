@@ -1,10 +1,9 @@
 from secure_river import app
 from flask_mongoengine import MongoEngine
-from mongoengine import connect
 import os
 
 if ('MONGODB_URI' in os.environ):
-    connect(os.environ['MONGODB_URI'])
+    app.config["MONGODB_SETTINGS"] = {'DB': "heroku_lq1klvm7", "host":os.environ['MONGODB_URI']}
 
 db = MongoEngine(app)
 
