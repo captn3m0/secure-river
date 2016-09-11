@@ -3,7 +3,7 @@ import requests
 from flask import request, g
 
 from mobile_codes import mcc_mnc
-from models import Network as NetworkModel
+from secure_river.models import Network as NetworkModel
 from querystring_parser import parser
 
 class Network(object):

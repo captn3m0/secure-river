@@ -5,7 +5,7 @@ db = MongoEngine(app)
 
 from datetime import datetime
 from uuid import uuid4
-from data.isp import STATE_LOOKUPS, CODE_LOOKUPS
+from secure_river.data.isp import STATE_LOOKUPS, CODE_LOOKUPS
 import re
 
 def get_uuid():

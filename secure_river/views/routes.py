@@ -1,6 +1,6 @@
 import json
 
-from flask import request, g
+from flask import request, g, jsonify
 
 from secure_river import app
 from secure_river.models import Client, Job, Network
