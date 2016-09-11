@@ -9,7 +9,7 @@ import uuid
 
 from mobile_codes import operators, mcc_mnc
 from secure_river.models import Job, Network as NetworkModel
-from data.isp import STATE_LOOKUPS, CODE_LOOKUPS
+from secure_river.data.isp import STATE_LOOKUPS, CODE_LOOKUPS
 
 from secure_river.models import db
 
@@ -94,7 +94,7 @@ def seed():
 
 def seed_jobs():
     d = datetime.datetime.now()
-    job = Job(scheduled_on=d, site='https://thepiratebay.org', network=None, status='PENDING')
+    job = Job(scheduled_on=d, site='https://thepiratebay.org', status='PENDING')
     job.save()
 
 
