@@ -20,6 +20,7 @@ def submit_job_response(id):
     if not job:
         return 'False'
     job = job[0]
+    # TODO: Read as JSON
     content = request.values
     values = {
         'network': g.networks[0],
@@ -50,5 +51,3 @@ def create_job():
         'url': job.site,
         'status': job.status
     })
-
-

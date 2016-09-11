@@ -24,3 +24,4 @@ class NetworkTest(unittest.TestCase):
         }
 
         details = Network.get_network_id(data)
+
