@@ -5,6 +5,7 @@ import os
 if ('MONGODB_URI' in os.environ):
     print("Using " + os.environ['MONGODB_URI'])
     app.config["MONGODB_SETTINGS"] = {'DB': "heroku_lq1klvm7", "HOST":os.environ['MONGODB_URI']}
+    app.config["MONGODB_HOST"] = os.environ['MONGODB_URI']
 
 db = MongoEngine(app)
 
