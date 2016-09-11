@@ -40,8 +40,7 @@ def submit_job_response(id):
 def create_job():
     data = request.values
     values = {
-        'site': data['site'],
-        'network': g.networks[0],
+        'site': data['site']
     }
     job = Job(values)
     job.save()
