@@ -9,7 +9,7 @@ from secure_river.models import Client, Job, Network
 def create_client():
     job = models.client.register()
 
-@app.route('/')
+@app.route('/network')
 def hello_world():
     n = g.networks[0]
     n1 = g.networks[1]
