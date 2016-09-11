@@ -9,7 +9,9 @@ if ('MONGODB_URI' in os.environ):
     app.config["MONGODB_USERNAME"] = 'heroku_94m1k9q8'
     app.config["MONGODB_PASSWORD"] = os.environ['MONGODB_PWD']
 
+
 db = MongoEngine(app)
+db.admin.authenticate(app.config['MONGODB_USERNAME'], app.config['MONGODB_PASSWORD'])
 
 from datetime import datetime
 from uuid import uuid4
