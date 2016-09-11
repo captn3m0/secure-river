@@ -1,8 +1,9 @@
 import json
-from app import app
-from flask import request, g, jsonify
-import json
-from models import Client, Job, Network
+
+from flask import request, g
+
+from secure_river import app
+from secure_river.models import Client, Job, Network
 
 @app.route('/jobs/<id>', methods=['GET'])
 def fetch_job_details(id):

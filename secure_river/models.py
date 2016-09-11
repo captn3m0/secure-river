@@ -1,4 +1,7 @@
-from app import db
+from secure_river import app
+from flask_mongoengine import MongoEngine
+
+db = MongoEngine(app)
 
 from datetime import datetime
 from uuid import uuid4

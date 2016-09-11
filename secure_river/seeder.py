@@ -3,11 +3,11 @@ import requests
 import collections
 import csv
 from mobile_codes import operators, mcc_mnc
-from models import Job, Network as NetworkModel
+from secure_river.models import Job, Network as NetworkModel
 import datetime
 from data.isp import STATE_LOOKUPS, CODE_LOOKUPS
 import re
-from app import db
+from secure_river.models import db
 
 Network = collections.namedtuple('Network', ['isp', 'org', 'state'], verbose=False)
 

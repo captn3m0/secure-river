@@ -1,8 +1,11 @@
 import json
-from app import app
+
 from flask import request
-from models import Client
 from uuid import uuid4
+
+from secure_river import app
+from secure_river.models import Client
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register_device():

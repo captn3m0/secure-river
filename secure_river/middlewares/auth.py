@@ -1,6 +1,6 @@
 from flask import request, g
 import base64
-from models import Client
+from secure_river.models import Client
 
 def auth():
     token = request.headers.get('Authorization', None)
