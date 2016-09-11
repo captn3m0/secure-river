@@ -1,6 +1,6 @@
 import json
 from app import app
-from flask import request, g
+from flask import request, g, jsonify
 import json
 from models import Client, Job, Network
 
@@ -36,4 +36,21 @@ def create_client():
 
 @app.route('/')
 def hello_world():
-    return g.networks[0].to_json()
+    n = g.networks[0]
+    n1 = g.networks[1]
+    res = {
+        'network': {
+            'region': n.region,
+            'isp': n.isp,
+            'mobile': n.mobile,
+            'mccmnc': n.mccmnc
+        },
+        'network_apparent': {
+            'region': n1.region,
+            'isp': n1.isp,
+            'mobile': n1.mobile,
+            'mccmnc': n1.mccmnc
+        }
+    }
+
+    return jsonify(**res)

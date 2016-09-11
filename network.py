@@ -15,11 +15,20 @@ class Network(object):
         return requests.get(url).json()
 
     def get_network_id(data):
+        ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+
         if (data['type'] == 'mobile'):
-            network = NetworkModel.objects(db.Q(mobile=True) & db.Q(mccmnc=data['mccmnc'])).only('region', 'isp', 'mccmnc')
-            print(network.to_json())
-            # network_apparent = Network.get_isp_info(data['ip'])
-        return (network, None)
+            network = NetworkModel.find_by_mcc_mnc(data['mccmnc'])
+        isp_info = Network.get_isp_info(ip)
+        network_apparent = NetworkModel.find_or_create(isp_info)
+
+        if (data['type'] == 'mobile'):
+            if ((network.isp == network_apparent.isp) and (network.region == network_apparent.region)):
+                network_apparent = network
+        else:
+            network = network_apparent
+
+        return (network, network_apparent)
 
     @staticmethod
     def middleware():
