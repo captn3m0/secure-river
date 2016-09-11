@@ -11,7 +11,8 @@ from mobile_codes import operators, mcc_mnc
 from secure_river.models import Job, Network as NetworkModel
 from secure_river.data.isp import STATE_LOOKUPS, CODE_LOOKUPS
 
-from secure_river.models import db
+from secure_river.models import db, Client
+from secure_river import constants
 
 Network = collections.namedtuple('Network', ['isp', 'org', 'state'], verbose=False)
 
@@ -102,5 +103,3 @@ def seed_clients():
     token = uuid.uuid4()
     client = Client(id=constants.VERITASERUM_CLIENT, token=token.hex)
     client.save()
-    print(client.__dict__)
-
