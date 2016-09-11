@@ -38,6 +38,10 @@ class Network(Base):
     mccmnc = db.StringField(max_length=6, null=True)
 
     @staticmethod
+    def get_iff():
+        return Network.objects(db.Q(region='INTERNAL') & db.Q(isp='IFF')).first()
+
+    @staticmethod
     def find_by_mcc_mnc(mcc_mnc):
         return Network.objects(db.Q(mobile=True) & db.Q(mccmnc=mcc_mnc)).only('region', 'isp', 'mccmnc', 'mobile').first()
 
@@ -88,7 +92,7 @@ class Job(Base):
 
 
 class Response(Base):
-    headers = db.StringField()
+    headers = db.DictField()
     status = db.IntField()
     body = db.StringField()
 
@@ -99,8 +103,7 @@ class Report(Base):
     network_appr = db.ReferenceField(Network)
     client_id = db.ReferenceField(Client)
     status = db.StringField(max_length=80)
-    response = db.StringField(max_length=90)
-    point = db.GeoPointField(required=True)
+    point = db.GeoPointField(null=True)
     tcp = db.BooleanField()
     metadata = db.StringField()
     dns_ip = db.StringField(null=True)

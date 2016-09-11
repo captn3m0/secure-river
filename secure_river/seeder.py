@@ -47,6 +47,12 @@ def seed_mcc_codes():
                 entity = NetworkModel(region=state, isp=telco, mobile=True, mccmnc=mccmnc)
                 entity.save()
                 print("saved")
+def seed_local_network():
+        entity = NetworkModel.objects(db.Q(region='INTERNAL') & db.Q(isp='IFF')).first()
+        if entity == None:
+            entity = NetworkModel(region='IFF', isp='IFF', mobile=False, mccmnc=None)
+            entity.save()
+            print('added internal network')
 
 def get_ip_addresses():
     BASE_URL = 'http://tools.tracemyip.org/search--country/india:-v-:&gNr=50&gTr='
@@ -90,6 +96,7 @@ def seed_ip_addresses():
 
 def seed():
     seed_mcc_codes()
+    seed_local_network()
     # seed_ip_addresses()
 
 

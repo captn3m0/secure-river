@@ -50,7 +50,7 @@ class Veritaserum(object):
     def process_dns(self):
         try:
             return socket.gethostbyname(self.hostname)
-        except e:
+        except:
             return None
 
     def parse_response(self, res):
