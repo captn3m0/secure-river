@@ -36,4 +36,4 @@ def create_client():
 
 @app.route('/')
 def hello_world():
-    return json.dumps(g.client)
+    return g.networks[0].to_json()

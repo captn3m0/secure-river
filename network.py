@@ -1,6 +1,9 @@
 from mobile_codes import mcc_mnc
 import requests
 from flask import request, g
+from models import Network as NetworkModel
+from querystring_parser import parser
+from app import db
 
 class Network(object):
 
@@ -13,16 +16,17 @@ class Network(object):
 
     def get_network_id(data):
         if (data['type'] == 'mobile'):
-            mcc,mnc = (data['mccmnc'][0:3], data['mccmnc'][3:])
-            network = Network.lookup_mcc_mnc(mcc, mnc)
-            network_apparent = Network.get_isp_info(data['ip'])
-        return (network, network_apparent)
+            network = NetworkModel.objects(db.Q(mobile=True) & db.Q(mccmnc=data['mccmnc'])).only('region', 'isp', 'mccmnc')
+            print(network.to_json())
+            # network_apparent = Network.get_isp_info(data['ip'])
+        return (network, None)
 
     @staticmethod
     def middleware():
-        val = request.values
-        if ('network' in val):
-            g.networks = self.get_network_id(val['network'])
+        g.networks = None
+        data = request.values
+        if ('network' in data):# and data['network'] == '1'):
+            g.networks = Network.get_network_id(data)
         return None
 
     # @staticmethod
