@@ -1,5 +1,5 @@
 import unittest
-from network import Network
+from secure_river.network import Network
 
 class NetworkTest(unittest.TestCase):
     def test_mcc_code(self):

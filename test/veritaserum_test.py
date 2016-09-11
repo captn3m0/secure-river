@@ -1,5 +1,5 @@
 import unittest
-from veritaserum import Veritaserum
+from secure_river.veritaserum import Veritaserum
 
 class VeritaserumTest(unittest.TestCase):
     def test_process(self):
