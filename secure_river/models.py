@@ -93,3 +93,4 @@ class Report(Base):
     metadata = db.StringField()
     dns_ip = db.StringField(null=True)
     http_response = db.ReferenceField(Response)
+    https_response = db.ReferenceField(Response)

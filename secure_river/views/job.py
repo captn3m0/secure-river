@@ -20,4 +20,31 @@ def submit_job_response(id):
         return 'False'
     job = job[0]
     content = request.values
+    values = {
+        'network': g.networks[0],
+        'network_appr': g.networks[1],
+        'point': {'lon': content['lon'], 'lat': content['lat']},
+        'http_response': content['http'],
+        'https_response': content['https'],
+        'dns_ip': content['dns_ip'],
+        'tcp': content['tcp'],
+        'job': job,
+        'client': g.client,
+    }
+    report  = Report(values)
+    report.save()
+    return report.to_json()
+
+# Submit a job
+@app.route('/job', method=['POST'])
+def create_job():
+    data = request.values
+    values = {
+        'site': data['site'],
+        'network': g.networks[0],
+    }
+    job = Job(values)
+    job.save()
+    return job.to_json()
+
 
