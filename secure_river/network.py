@@ -35,9 +35,6 @@ class Network(object):
     def middleware():
         g.networks = None
         data = request.values
-        if ('network' in data):# and data['network'] == '1'):
+        if ('network' in data):
             g.networks = Network.get_network_id(data)
         return None
-
-    # @staticmethod
-    # def get_isp_code(name):
