@@ -40,6 +40,7 @@ class Network(Base):
     # Where we don't have any way of knowing
     # The data is assumed to be fetched using
     # http://ip-api.com/json/<ip>
+    @staticmethod
     def find_or_create(data):
         regionName = data['regionName']
         region = data['region']

@@ -11,10 +11,12 @@ class Network(object):
     def lookup_mcc_mnc(mcc, mnc):
         return mcc_mnc(mcc, mnc)
 
+    @staticmethod
     def get_isp_info(ip):
         url = "http://ip-api.com/json/" + ip
         return requests.get(url).json()
 
+    @staticmethod
     def get_network_id(data):
         ip = request.headers.get('X-Forwarded-For', request.remote_addr)
 
