@@ -7,16 +7,9 @@ import os
 
 sys.path.append(abspath(dirname(__file__)))
 
-from flask_mongoengine import MongoEngine
-from mongoengine import connect
-
-if ('MONGODB_URI' in os.environ):
-    connect(os.environ['MONGODB_URI'])
-
-db = MongoEngine(app)
-
 import click
-import seeder
+from secure_river import seeder
+from secure_river import app
 
 @app.cli.command()
 def populate_networks():
@@ -27,3 +20,8 @@ def populate_networks():
 def populate_jobs():
     click.echo('Populating jobs')
     seeder.seed_jobs()
+
+@app.cli.command()
+def populate_clients():
+    click.echo('Populating clients')
+    seeder.seed_clients()

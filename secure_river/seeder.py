@@ -1,12 +1,16 @@
 from bs4 import BeautifulSoup
+
 import requests
 import collections
 import csv
+import datetime
+import re
+import uuid
+
 from mobile_codes import operators, mcc_mnc
 from secure_river.models import Job, Network as NetworkModel
-import datetime
 from data.isp import STATE_LOOKUPS, CODE_LOOKUPS
-import re
+
 from secure_river.models import db
 
 Network = collections.namedtuple('Network', ['isp', 'org', 'state'], verbose=False)
@@ -78,14 +82,25 @@ def parse_ip_page(content):
 
     return result
 
+
 def seed_ip_addresses():
     get_ip_addresses()
+
 
 def seed():
     seed_mcc_codes()
     # seed_ip_addresses()
 
+
 def seed_jobs():
     d = datetime.datetime.now()
     job = Job(scheduled_on=d, site='https://thepiratebay.org', network=None, status='PENDING')
     job.save()
+
+
+def seed_clients():
+    token = uuid.uuid4()
+    client = Client(id=constants.VERITASERUM_CLIENT, token=token.hex)
+    client.save()
+    print(client.__dict__)
+

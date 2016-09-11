@@ -75,10 +75,12 @@ class Job(Base):
     site = db.URLField()
     status = db.StringField()
 
+
 class Response(Base):
     headers = db.StringField()
     status = db.IntField()
     body = db.StringField()
+
 
 class Report(Base):
     job = db.ReferenceField(Job)
