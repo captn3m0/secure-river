@@ -7,4 +7,4 @@ import secure_river.network as network_util
 app.before_request(network_util.Network.middleware)
 app.before_request(auth)
 # import all the routes
-from secure_river.views import register, routes
+from secure_river.views import register, routes, network, job

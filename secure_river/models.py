@@ -89,7 +89,7 @@ class Report(Base):
     client_id = db.ReferenceField(Client)
     status = db.StringField(max_length=80)
     response = db.StringField(max_length=90)
-    point = GeoPointField(required=True)
+    point = db.GeoPointField(required=True)
     tcp = db.BooleanField()
     metadata = db.StringField()
     dns_ip = db.StringField(null=True)

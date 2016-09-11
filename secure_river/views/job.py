@@ -19,4 +19,5 @@ def submit_job_response(id):
     if not job:
         return 'False'
     job = job[0]
-    content = request.args.get('id=1')
+    content = request.values
+
