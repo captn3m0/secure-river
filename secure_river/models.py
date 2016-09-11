@@ -3,10 +3,11 @@ from flask_mongoengine import MongoEngine
 import os
 
 if ('MONGODB_URI' in os.environ):
-    print("Using " + os.environ['MONGODB_URI'])
-
-    app.config["MONGODB_SETTINGS"] = {'DB': "heroku_94m1k9q8", "HOST":os.environ['MONGODB_URI']}
-    app.config["MONGODB_HOST"] = os.environ['MONGODB_URI']
+    app.config["MONGODB_HOST"] = 'ds019996.mlab.com'
+    app.config["MONGODB_PORT"] = 19996
+    app.config["MONGODB_DATABASE"] = 'heroku_94m1k9q8'
+    app.config["MONGODB_USERNAME"] = 'heroku_94m1k9q8'
+    app.config["MONGODB_PASSWORD"] = os.environ['MONGODB_PWD']
 
 db = MongoEngine(app)
 
