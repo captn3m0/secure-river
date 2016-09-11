@@ -11,7 +11,7 @@ if ('MONGODB_URI' in os.environ):
 
 
 db = MongoEngine(app)
-db.admin.authenticate(app.config['MONGODB_USERNAME'], app.config['MONGODB_PASSWORD'])
+# db.admin.authenticate(app.config['MONGODB_USERNAME'], app.config['MONGODB_PASSWORD'])
 
 from datetime import datetime
 from uuid import uuid4

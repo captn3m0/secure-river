@@ -4,6 +4,7 @@ from flask import request, g, jsonify
 
 from secure_river import app
 from secure_river.models import Client, Job, Network
+import secure_river.veritaserum
 import datetime
 
 @app.route('/jobs/<id>', methods=['GET'])
@@ -45,6 +46,15 @@ def create_job():
 
     job = Job(scheduled_on=d, site=data['url'], status='PENDING')
     job.save()
+
+    v = Veritaserum(data['url'])
+    res = v.processs()
+
+    http_res = Response(**res['http'])
+    https_res = Response(**res['http'])
+
+
+    # Response(headers=)
 
     return jsonify({
         'id': job.id,

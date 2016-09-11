@@ -23,6 +23,7 @@ class Network(object):
         if (data['type'] == 'mobile'):
             network = NetworkModel.find_by_mcc_mnc(data['mccmnc'])
         isp_info = Network.get_isp_info(ip)
+        print(isp_info)
         network_apparent = NetworkModel.find_or_create(isp_info)
 
         if (data['type'] == 'mobile'):
