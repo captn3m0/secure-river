@@ -75,7 +75,6 @@ class Job(Base):
     site = db.URLField()
     network = db.ReferenceField(Network)
     status = db.StringField()
-    point = GeoPointField(required=True)
 
 class Response(Base):
     headers = db.StringField()
